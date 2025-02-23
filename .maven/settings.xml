@@ -1,17 +1,64 @@
 <?xml version="1.0"?>
 <settings>
 
-  <pluginGroups>
-    <pluginGroup>org.mule.tools</pluginGroup>
-  </pluginGroups>
+	<pluginGroups>
+		<pluginGroup>org.mule.tools</pluginGroup>
+	</pluginGroups>
 
-  <servers>
-    <!-- connected app's required scopes: https://help.salesforce.com/s/articleView?id=001119708&type=1 -->
-    <server>
-      <id>Repository</id> <!-- make sure this matches the serverId property in pom.xml -->
-      <username>~~~Client~~~</username>
-      <password>${client.id}~?~${client.secret}</password> <!-- these come from the build.yml and your github secrets -->
-    </server>
-  </servers>
+	<servers>
+		<!-- connected app's required scopes: https://help.salesforce.com/s/articleView?id=001119708&type=1 -->
+		<server>
+			<id>anypoint-exchange-v3</id> <!-- make sure this matches the serverId property in pom.xml -->
+			<username>~~~Client~~~</username>
+			<password>${client.id}~?~${client.secret}</password>
+		</server>
+	</servers>
+
+	<profiles>
+		<profile>
+			<id>mule-repositories</id>
+			<activation>
+				<activeByDefault>true</activeByDefault>
+			</activation>
+			<repositories>
+				<repository>
+					<releases/>
+					<snapshots/>
+					<id>mule-enterprise-nexus-repository</id>
+					<name>Mule Enterprise Nexus Repository</name>
+					<url>https://repository.mulesoft.org/nexus-ee/content/repositories/releases-ee/</url>
+				</repository>
+				<repository>
+					<releases/>
+					<snapshots/>
+					<id>MuleRepositoryPublic</id>
+					<name>Mule Repository Public</name>
+					<url>https://repository.mulesoft.org/nexus/content/repositories/public</url>
+				</repository>
+				<repository>
+					<id>mulesoft-releases</id>
+					<name>MuleSoft Releases Repository</name>
+					<url>https://repository.mulesoft.org/releases/</url>
+				</repository>
+				<repository>
+					<id>mulesoft-snapshots</id>
+					<name>MuleSoft Snapshots Repository</name>
+					<url>https://repository.mulesoft.org/snapshots/</url>
+				</repository>
+			</repositories>
+			<pluginRepositories>
+				<pluginRepository>
+					<id>mulesoft-releases</id>
+					<name>MuleSoft Releases</name>
+					<url>https://repository.mulesoft.org/releases/</url>
+				</pluginRepository>
+				<pluginRepository>
+					<id>mulesoft-snapshots</id>
+					<name>MuleSoft Snapshots</name>
+					<url>https://repository.mulesoft.org/snapshots/</url>
+				</pluginRepository>
+			</pluginRepositories>
+		</profile>
+	</profiles>
 
 </settings>
