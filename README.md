@@ -41,3 +41,5 @@ The initial versions of the pipeline are based on the following repository creat
 - [Docs] [Deploy Applications to CloudHub Using the Mule Maven Plugin](https://docs.mulesoft.com/mule-runtime/latest/deploy-to-cloudhub)
 - [Docs] [Deploy Applications to CloudHub 2.0 Using the Mule Maven Plugin](https://docs.mulesoft.com/mule-runtime/latest/deploy-to-cloudhub-2)
 - [Docs] [CloudHub 2.0 Architecture - Regions and DNS Records](https://docs.mulesoft.com/cloudhub-2/ch2-architecture#regions-and-dns-records)
+
+- Commit
