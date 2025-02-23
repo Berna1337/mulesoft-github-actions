@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>b28a9741-3e1a-4eae-adad-ffe901c03d26</groupId> <!-- make sure to add your business group ID here -->
 	<artifactId>github-actions</artifactId>
-	<version>1.24.11</version> <!-- this has to change EVERY TIME you want to re-deploy -->
+	<version>1.25.11</version> <!-- this has to change EVERY TIME you want to re-deploy -->
 	<packaging>mule-application</packaging>
 	<name>github-actions</name>
 	<properties>
