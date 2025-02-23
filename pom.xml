@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>b28a9741-3e1a-4eae-adad-ffe901c03d26</groupId> <!-- make sure to add your business group ID here -->
-	<artifactId>github-actions</artifactId>
+	<groupId>f5e27c91-178b-4f89-9c67-d540afa56d43</groupId> <!-- make sure to add your business group ID here -->
+	<artifactId>mulesoft-github-actions</artifactId>
 	<version>1.0.0</version> <!-- this has to change EVERY TIME you want to re-deploy -->
 	<packaging>mule-application</packaging>
 	<name>mulesoft-github-actions</name>
