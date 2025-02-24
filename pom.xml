@@ -4,7 +4,7 @@
     <groupId>b28a9741-3e1a-4eae-adad-ffe901c03d26</groupId>
     <!-- make sure to add your business group ID here -->
     <artifactId>azure-pipelines-test</artifactId>
-    <version>1.0.16</version>
+    <version>1.0.17</version>
     <!-- this has to change EVERY TIME you want to re-deploy -->
     <packaging>mule-application</packaging>
     <name>azure-pipelines</name>
@@ -44,14 +44,15 @@
                         <environment>${env}</environment>
                         <target>${region}</target>
                         <server>${serverId}</server>
-			<releaseChannel>${releaseChannel}</releaseChannel>
+			
                         <!-- this is where our credentials will be stored -->
                         <applicationName>${project.artifactId}</applicationName>
                         <replicas>1</replicas>
-                        <vCores>1</vCores>
+                        <vCores>0.1</vCores>
                         <deploymentSettings>
                             <generateDefaultPublicUrl>true</generateDefaultPublicUrl>
                         </deploymentSettings>
+			<skipDeploymentVerification>true</skipDeploymentVerification>
                         <!-- Start: SECURED PROPERTIES CI/CD -->
 			<!--
                         <secureProperties>
