@@ -4,7 +4,7 @@
     <groupId>b28a9741-3e1a-4eae-adad-ffe901c03d26</groupId>
     <!-- make sure to add your business group ID here -->
     <artifactId>azure-pipelines</artifactId>
-    <version>1.1.11-SNAPSHOT</version>
+    <version>1.12.11</version>
     <!-- this has to change EVERY TIME you want to re-deploy -->
     <packaging>mule-application</packaging>
     <name>azure-pipelines</name>
@@ -14,7 +14,7 @@
         <mule.maven.plugin.version>4.1.1</mule.maven.plugin.version>
         <!-- use at least v4.1.0 -->
         <env>Sandbox</env>
-        <releaseChannel>LTS</releaseChannel>
+        <releaseChannel>NONE</releaseChannel>
         <!-- use `NONE` for Mule Runtime 4.4 or `LTS`/`EDGE` for 4.6+ -->
         <region>Cloudhub-US-East-2</region>
         <!-- make sure it's one of these Target Names: https://docs.mulesoft.com/cloudhub-2/ch2-architecture#regions-and-dns-records -->
