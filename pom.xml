@@ -4,7 +4,7 @@
     <groupId>b28a9741-3e1a-4eae-adad-ffe901c03d26</groupId>
     <!-- make sure to add your business group ID here -->
     <artifactId>azure-pipelines-test</artifactId>
-    <version>1.0.7</version>
+    <version>1.0.8</version>
     <!-- this has to change EVERY TIME you want to re-deploy -->
     <packaging>mule-application</packaging>
     <name>azure-pipelines</name>
@@ -14,7 +14,7 @@
         <mule.maven.plugin.version>4.3.0</mule.maven.plugin.version>
         <!-- use at least v4.1.0 -->
         <env>Sandbox</env>
-        <releaseChannel>LTS</releaseChannel>
+        <releaseChannel>NONE</releaseChannel>
         <!-- use `NONE` for Mule Runtime 4.4 or `LTS`/`EDGE` for 4.6+ -->
         <region>Cloudhub-US-East-2</region>
         <!-- make sure it's one of these Target Names: https://docs.mulesoft.com/cloudhub-2/ch2-architecture#regions-and-dns-records -->
@@ -47,12 +47,14 @@
                         <applicationName>${project.artifactId}</applicationName>
                         <releaseChannel>${releaseChannel}</releaseChannel>
                         <replicas>1</replicas>
-                        <vCores>0.1</vCores>
+                        <vCores>1</vCores>
                         <deploymentSettings>
                             <generateDefaultPublicUrl>true</generateDefaultPublicUrl>
                         </deploymentSettings>
                         <!-- Start: SECURED PROPERTIES CI/CD -->
-                        
+                        <secureProperties>
+                            <secure.key>${decryption.key}</secure.key>
+                        </secureProperties>
                         <!-- End: SECURED PROPERTIES CI/CD -->
                         <!-- use `properties` for non-secured values -->
                         <!-- <properties>
@@ -77,7 +79,9 @@
                 </executions>
                 <configuration>
                     <!-- START: MUnit coverage -->
-                    
+                    <environmentVariables>
+                        <secure.key>${decryption.key}</secure.key>
+                    </environmentVariables>
                     <!-- END: MUnit coverage -->
                     <coverage>
                         <runCoverage>true</runCoverage>
