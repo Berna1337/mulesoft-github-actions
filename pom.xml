@@ -4,14 +4,14 @@
     <groupId>b28a9741-3e1a-4eae-adad-ffe901c03d26</groupId>
     <!-- make sure to add your business group ID here -->
     <artifactId>azure-pipelines-test</artifactId>
-    <version>1.0.8</version>
+    <version>1.0.9</version>
     <!-- this has to change EVERY TIME you want to re-deploy -->
     <packaging>mule-application</packaging>
     <name>azure-pipelines</name>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <mule.maven.plugin.version>4.3.0</mule.maven.plugin.version>
+        <mule.maven.plugin.version>4.1.1</mule.maven.plugin.version>
         <!-- use at least v4.1.0 -->
         <env>Sandbox</env>
         <releaseChannel>NONE</releaseChannel>
